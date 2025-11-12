@@ -1,0 +1,52 @@
+.layout-container {
+    display: flex;
+    height: 100vh;
+    background-color: #f8faff;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #d9e8f5;
+    padding: 20px;
+    border-radius: 0 20px 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.avatar span {
+    font-size: 50px;
+    color: #4b7ebd;
+}
+
+.user-details {
+    margin-left: 10px;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px;
+    color: #1e3857;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.menu a.active,
+.menu a:hover {
+    background-color: #bcd7f0;
+    font-weight: 600;
+}
+
+.content {
+    flex: 1;
+    padding: 30px;
+    background-color: #f4f7fc;
+}

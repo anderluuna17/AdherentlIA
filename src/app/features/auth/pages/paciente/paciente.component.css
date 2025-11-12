@@ -1,0 +1,58 @@
+.paciente-container {
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin: 0 auto 20px;
+    width: 60%;
+    border: 1px solid #b0c4de;
+    border-radius: 10px;
+    padding: 6px 10px;
+    background-color: #f9fbff;
+}
+
+.search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.table-container {
+    background-color: #f1f8ff;
+    border-radius: 15px;
+    padding: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    text-align: left;
+    padding: 10px;
+    color: #1a3a5f;
+}
+
+td {
+    padding: 10px;
+    background-color: #c6e1ff;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+.arrow {
+    color: #1a3a5f;
+}

@@ -1,0 +1,84 @@
+<div class="registrar-paciente>">
+    <h2>Registro de paciente</h2>
+
+    <!--Barra de progreso-->
+    <div class="progress-bar">
+        <div class="step" [class.activate]="step >= 1"></div>
+        <div class="step" [class.activate]="step >= 2"></div>
+    </div>
+
+    <!--Primera ventana de registro (formulario)-->
+    <form *ngIf="step === 1" [formGroup]="formStep1" (ngSubmit)="nextStep()">
+        <div class="form-section">
+            <div class="info-group">
+                <h3>Información Personal</h3>
+
+                <label>Nombre Completo *</label>
+                <input type="text" formControlName="nombre" placeholder="Nombre completo" />
+
+                <label>Género *</label>
+                <select formControlName="genero">
+                    <option value="">Ninguno Seleccionado</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+
+                <label>Fecha de Nacimiento *</label>
+                <input type="date" formControlName="fechaNacimiento" />
+
+                <div class="info-group">
+                    <h3>Información de Contacto</h3>
+                    <label>Número de Telefóno *</label>
+                    <input type="text" formControlName="telefono" placeholder="ej. +52 936 101 9033" />
+                    <label>Correo Electrónico *</label>
+                    <input type="text" formControlName="correo" placeholder="ej. correopaciente@gmail.com" />
+                </div>
+            </div>
+
+            <div class="botones">
+                <button type="submit" class="btn-siguiente">Siguiente</button>
+            </div>
+        </div>
+    </form>
+
+
+
+    <!-- Paso 2 -->
+    <form *ngIf="step === 2" [formGroup]="formStep2" (ngSubmit)="submitAll()">
+        <div class="form-section">
+            <div class="info-group">
+                <h3>Información Médica</h3>
+
+                <label>Tipo de sangre *</label>
+                <select formControlName="tipoSangre">
+                    <option value="">Seleccionar</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+
+                <label>Enfermedades crónicas</label>
+                <textarea formControlName="enfermedades" rows="3"></textarea>
+            </div>
+
+            <div class="info-group">
+                <h3>Datos de emergencia</h3>
+
+                <label>Nombre del contacto *</label>
+                <input type="text" formControlName="contactoEmergencia" />
+
+                <label>Teléfono de emergencia *</label>
+                <input type="text" formControlName="telefonoEmergencia" />
+            </div>
+        </div>
+
+        <div class="botones">
+            <button type="button" class="btn-anterior" (click)="previousStep()">Anterior</button>
+            <button type="submit" class="btn-siguiente">Finalizar</button>
+        </div>
+    </form>
+
+</div>
