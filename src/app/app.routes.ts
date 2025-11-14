@@ -7,6 +7,8 @@ import { PacienteComponent } from './features/auth/pages/paciente/paciente.compo
 import { LoginComponent } from './features/auth/pages/login/login.component';
 import { SignupComponent } from './features/auth/pages/signup/signup.component';
 import { RegistrarPacienteComponent } from './features/auth/pages/registrar-paciente/registrar-paciente.component';
+import { RegistroLibreComponent } from './features/auth/pages/registro-libre/registro-libre.component';
+
 
 export const routes: Routes = [
     {
@@ -19,7 +21,8 @@ export const routes: Routes = [
                 path: 'pacientes',
                 children: [
                     { path: '', component: PacienteComponent },
-                    { path: 'registrar', component: RegistrarPacienteComponent }
+                    { path: 'registrar', component: RegistrarPacienteComponent },
+                    { path: 'registro-libre', component: RegistroLibreComponent }
                 ]
             },
 

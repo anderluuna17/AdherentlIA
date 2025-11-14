@@ -2,6 +2,11 @@
 
     <h2 class="titulo">Registro de paciente</h2>
 
+    <button class="btn-ejemplo" routerLink="/pacientes/registro-libre">
+        <span class="material-icons">edit_square</span>
+        Registro libre
+    </button>
+
     <!-- Barra de progreso -->
     <div class="progress-bar">
         <div class="step" [class.active]="step >= 1"></div>
@@ -11,7 +16,10 @@
 
     <div class="step1-container">
         <!-- PASO 1 -->
+
         <form *ngIf="step === 1">
+
+
             <h3>Selecciona un Paciente</h3>
             <p class="descripcion">Para registrar los datos adicionales de un paciente existente debe buscarlo.</p>
 
@@ -36,17 +44,18 @@
                 </a>
             </div>
 
+
             <button type="button" class="btn-siguiente" (click)="nextStep()">Siguiente</button>
         </form>
 
     </div>
+
     <!-- Paso 2 -->
     <form *ngIf="step === 2" class="form-section step2-form">
 
         <h3>Información Socio-Económica</h3>
 
         <div class="form-grid">
-
             <!-- Columna izquierda -->
             <div class="info-group">
                 <label>Ingreso Mensual Aproximado (MXN)</label>
@@ -72,7 +81,6 @@
                     <option>Persona trabajadora del hogar</option>
                     <option>Jubilad(a)</option>
                 </select>
-
             </div>
 
             <!-- Columna derecha -->
@@ -113,4 +121,5 @@
         </div>
 
     </form>
+
 </div>
