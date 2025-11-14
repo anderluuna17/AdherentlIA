@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // ✅ Importa esto
+import { RouterModule } from '@angular/router'; // ← ⭐ IMPORTANTE
 
 @Component({
   selector: 'app-paciente',
   standalone: true, // ✅ asegúrate de tener esto
-  imports: [CommonModule], // ✅ agrega CommonModule
+  imports: [CommonModule, RouterModule], // ✅ agrega CommonModule
   templateUrl: './paciente.component.html',
-  styleUrls: ['./paciente.component.css']
+  styleUrls: ['./paciente.component.css'],
 })
 export class PacienteComponent {
   pacientes = [

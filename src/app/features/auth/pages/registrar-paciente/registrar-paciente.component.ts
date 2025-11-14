@@ -10,24 +10,21 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule, ReactiveFormsModule]
 })
 export class RegistrarPacienteComponent {
-  step = 1; // controla el paso actual
-  formStep1!: FormGroup;
+
+  step = 1;
+
   formStep2!: FormGroup;
 
   constructor(private fb: FormBuilder) {
-    this.formStep1 = this.fb.group({
-      nombre: [''],
-      genero: [''],
-      fechaNacimiento: [''],
-      telefono: [''],
-      correo: ['']
-    });
-
     this.formStep2 = this.fb.group({
-      tipoSangre: [''],
-      enfermedades: [''],
-      contactoEmergencia: [''],
-      telefonoEmergencia: ['']
+      ingresoMensual: [''],
+      nivelEstudios: [''],
+      costoTratamiento: [''],
+      ocupacion: [''],
+      residencia: [''],
+      estadoCivil: [''],
+      numeroHijos: [''],
+      afiliacion: ['']
     });
   }
 
@@ -35,16 +32,14 @@ export class RegistrarPacienteComponent {
     this.step = 2;
   }
 
-  previousStep() {
+  prevStep() {
     this.step = 1;
   }
 
   submitAll() {
-    console.log('Datos simulados:', {
-      ...this.formStep1.value,
-      ...this.formStep2.value
-    });
-    alert('Formulario de prueba enviado ');
+    console.log('Datos socioeconómicos enviados:', this.formStep2.value);
+    alert('Predicción realizada exitosamente ✔');
     this.step = 1;
+    this.formStep2.reset();
   }
 }

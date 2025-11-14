@@ -50,3 +50,36 @@
     padding: 30px;
     background-color: #f4f7fc;
 }
+
+/* 📌 SUBMENÚ PACIENTES */
+.menu-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-link {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.submenu {
+    display: none;
+    flex-direction: column;
+    margin-left: 38px;
+    gap: 7px;
+}
+
+.menu-group.open .submenu {
+    display: flex;
+}
+
+/* Flecha animada */
+.arrow {
+    transition: transform 0.25s;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
+}

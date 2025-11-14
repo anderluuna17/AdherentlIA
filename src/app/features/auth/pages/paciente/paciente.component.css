@@ -56,3 +56,27 @@ td {
 .arrow {
     color: #1a3a5f;
 }
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-registrar {
+    background-color: #4b7ebd;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.btn-registrar:hover {
+    background-color: #355d8a;
+}

@@ -9,4 +9,10 @@ import { CommonModule } from '@angular/common'; // ✅ Recomendado
     templateUrl: './main-layout.component.html',
     styleUrls: ['./main-layout.component.css']
 })
-export class MainLayoutComponent { }
+export class MainLayoutComponent {
+    submenuOpen = false;
+
+    toggleSubmenu() {
+        this.submenuOpen = !this.submenuOpen;
+    }
+}

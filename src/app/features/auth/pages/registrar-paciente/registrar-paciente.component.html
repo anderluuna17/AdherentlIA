@@ -1,84 +1,116 @@
-<div class="registrar-paciente>">
-    <h2>Registro de paciente</h2>
+<div class="registrar-paciente">
 
-    <!--Barra de progreso-->
+    <h2 class="titulo">Registro de paciente</h2>
+
+    <!-- Barra de progreso -->
     <div class="progress-bar">
-        <div class="step" [class.activate]="step >= 1"></div>
-        <div class="step" [class.activate]="step >= 2"></div>
+        <div class="step" [class.active]="step >= 1"></div>
+        <div class="step" [class.active]="step >= 2"></div>
+        <div class="step" [class.active]="step >= 3"></div>
     </div>
 
-    <!--Primera ventana de registro (formulario)-->
-    <form *ngIf="step === 1" [formGroup]="formStep1" (ngSubmit)="nextStep()">
-        <div class="form-section">
+    <div class="step1-container">
+        <!-- PASO 1 -->
+        <form *ngIf="step === 1">
+            <h3>Selecciona un Paciente</h3>
+            <p class="descripcion">Para registrar los datos adicionales de un paciente existente debe buscarlo.</p>
+
+            <!-- Barra de búsqueda -->
+            <div class="search-container">
+                <input type="text" placeholder="Ingrese el nombre o ID del paciente..." />
+                <span class="material-icons">search</span>
+            </div>
+
+            <!-- Datos simulados del paciente -->
+            <div class="paciente-info">
+                <strong>Ana Paola Vargas Carrera</strong>
+
+                <div class="info">
+                    <p><b>ID:</b> 1</p>
+                    <p><b>Fecha de Nacimiento:</b> 15/07/2004</p>
+                    <p><b>CURP:</b> LJFYWO980009</p>
+                </div>
+
+                <a class="historial">
+                    Ir al historial clínico ↗
+                </a>
+            </div>
+
+            <button type="button" class="btn-siguiente" (click)="nextStep()">Siguiente</button>
+        </form>
+
+    </div>
+    <!-- Paso 2 -->
+    <form *ngIf="step === 2" class="form-section step2-form">
+
+        <h3>Información Socio-Económica</h3>
+
+        <div class="form-grid">
+
+            <!-- Columna izquierda -->
             <div class="info-group">
-                <h3>Información Personal</h3>
+                <label>Ingreso Mensual Aproximado (MXN)</label>
+                <input type="number" min="0" placeholder="0.00" />
 
-                <label>Nombre Completo *</label>
-                <input type="text" formControlName="nombre" placeholder="Nombre completo" />
-
-                <label>Género *</label>
-                <select formControlName="genero">
-                    <option value="">Ninguno Seleccionado</option>
-                    <option value="Masculino">Masculino</option>
-                    <option value="Femenino">Femenino</option>
+                <label>Nivel de Estudios</label>
+                <select>
+                    <option>Ninguno Seleccionado</option>
+                    <option>Ninguno</option>
+                    <option>Básico (Primaria/Secundaria)</option>
+                    <option>Medio Superior (Preparatoria)</option>
+                    <option>Superior (Licenciatura o más)</option>
                 </select>
 
-                <label>Fecha de Nacimiento *</label>
-                <input type="date" formControlName="fechaNacimiento" />
+                <label>Costo mensual de tratamiento (MXN)</label>
+                <input type="number" min="0" placeholder="0.00" />
 
-                <div class="info-group">
-                    <h3>Información de Contacto</h3>
-                    <label>Número de Telefóno *</label>
-                    <input type="text" formControlName="telefono" placeholder="ej. +52 936 101 9033" />
-                    <label>Correo Electrónico *</label>
-                    <input type="text" formControlName="correo" placeholder="ej. correopaciente@gmail.com" />
+                <label>Ocupación *</label>
+                <select>
+                    <option>Ninguno Seleccionado</option>
+                    <option>Empleado</option>
+                    <option>Desempleado</option>
+                    <option>Persona trabajadora del hogar</option>
+                    <option>Jubilad(a)</option>
+                </select>
+
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="info-group">
+                <label>Residencia</label>
+                <select>
+                    <option>Ninguno Seleccionado</option>
+                    <option>Urbano</option>
+                    <option>Rural</option>
+                </select>
+
+                <label>Estado Civil</label>
+                <select>
+                    <option>Ninguno Seleccionado</option>
+                    <option>Soltero</option>
+                    <option>Casado</option>
+                    <option>Divorciado</option>
+                    <option>Viudo</option>
+                    <option>Unión libre</option>
+                </select>
+
+                <label>Número de hijos</label>
+                <input type="number" min="0" />
+
+                <label>Afiliación a servicios de salud</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="afiliacion" /> IMMS</label>
+                    <label><input type="radio" name="afiliacion" /> ISSSTE</label>
+                    <label><input type="radio" name="afiliacion" /> Servicio Privado</label>
                 </div>
             </div>
 
-            <div class="botones">
-                <button type="submit" class="btn-siguiente">Siguiente</button>
-            </div>
-        </div>
-    </form>
-
-
-
-    <!-- Paso 2 -->
-    <form *ngIf="step === 2" [formGroup]="formStep2" (ngSubmit)="submitAll()">
-        <div class="form-section">
-            <div class="info-group">
-                <h3>Información Médica</h3>
-
-                <label>Tipo de sangre *</label>
-                <select formControlName="tipoSangre">
-                    <option value="">Seleccionar</option>
-                    <option value="A+">A+</option>
-                    <option value="A-">A-</option>
-                    <option value="B+">B+</option>
-                    <option value="B-">B-</option>
-                    <option value="O+">O+</option>
-                    <option value="O-">O-</option>
-                </select>
-
-                <label>Enfermedades crónicas</label>
-                <textarea formControlName="enfermedades" rows="3"></textarea>
-            </div>
-
-            <div class="info-group">
-                <h3>Datos de emergencia</h3>
-
-                <label>Nombre del contacto *</label>
-                <input type="text" formControlName="contactoEmergencia" />
-
-                <label>Teléfono de emergencia *</label>
-                <input type="text" formControlName="telefonoEmergencia" />
-            </div>
         </div>
 
         <div class="botones">
-            <button type="button" class="btn-anterior" (click)="previousStep()">Anterior</button>
-            <button type="submit" class="btn-siguiente">Finalizar</button>
+            <button type="button" class="btn-anterior" (click)="prevStep()">Regresar</button>
+            <button type="button" class="btn-siguiente" (click)="nextStep()">Realizar predicción</button>
         </div>
-    </form>
 
+    </form>
 </div>
