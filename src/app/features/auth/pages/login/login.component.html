@@ -1,1 +1,35 @@
-<p>login works!</p>
+<div class="main-screen-container">
+    <div class="presentacion-container">
+        <img src="/966d17ba0f1b0ccf8a6e4de5dee3f519a35c5060.png" alt=" Logo AdherentIA" class="app-logo">
+
+        <h1 class="app-title">AdherentIA</h1>
+
+        <p class="app-lema">Sistema Predictivo de Adherencia Terapéutica en Pacientes con Enfermedades Crónicas</p>
+    </div>
+
+    <div class="login-container">
+        <h2>Iniciar Sesión</h2>
+
+        <div class="form-group">
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" placeholder="nombre@gmail.com">
+        </div>
+
+        <div class="form-group">
+            <label for="password">Contraseña</label>
+
+            <div class="input-wrapper">
+                <input type="password" id="password">
+                <span class="password-toggle-icon">👁️</span>
+            </div>
+        </div>
+
+        <button class="btn-entrar" routerLink="/pacientes">
+            Iniciar Sesión
+        </button>
+
+        <p class="registro-link">
+            ¿No tienes cuenta? <a routerLink="/signup">Regístrate aquí</a>
+        </p>
+    </div>
+</div>

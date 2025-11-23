@@ -7,15 +7,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   selector: 'app-paciente',
   standalone: true, // ✅ asegúrate de tener esto
   imports: [CommonModule, RouterModule, ReactiveFormsModule], // ✅ agrega CommonModule
-  templateUrl: './paciente.component.html',
-  styleUrls: ['./paciente.component.css'],
+  templateUrl: './editar-paciente.component.html',
+  styleUrls: ['./editar-paciente.component.css'],
 })
 
-export class PacienteComponent {
-  pacientes = [
-    { id: 1, nombre: 'Ana Paola Vargas Carrera', fecha: '07/11/2025' },
-    { id: 2, nombre: 'Katia Martagón Palacios', fecha: '07/11/2025' },
-    { id: 3, nombre: 'Ander Arturo Luna Díaz', fecha: '07/11/2025' }
-  ];
-}
+export class EditarPacienteComponent {
 
+}

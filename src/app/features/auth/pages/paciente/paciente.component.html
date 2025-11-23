@@ -28,7 +28,11 @@
                     <td>{{ paciente.id }}</td>
                     <td>{{ paciente.nombre }}</td>
                     <td>{{ paciente.fecha }}</td>
-                    <td><span class="material-icons arrow">arrow_outward</span></td>
+                    <td>
+                        <button class="btn-link-editar" routerLink="/pacientes/editar-paciente">
+                            <span class="material-icons arrow">arrow_outward</span>
+                        </button>
+                    </td>
                 </tr>
             </tbody>
         </table>

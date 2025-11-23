@@ -1,13 +1,16 @@
 <div class="registrar-paciente">
 
-    <h2 class="titulo">Registro de paciente</h2>
+    <div class="barra-superior">
+        <img src="/LogoHorizontal.png" alt="Logo AdherentIAHorizontal" class="app-logoHorizontal">
+        <h2 class="titulo">Registro de paciente</h2>
 
-    <button class="btn-ejemplo" routerLink="/pacientes/registro-libre">
+    </div>
+    <!-- ><button class="btn-ejemplo" routerLink="/pacientes/registro-libre">
         <span class="material-icons">edit_square</span>
         Registro libre
     </button>
 
-    <!-- Barra de progreso -->
+     Barra de progreso -->
     <div class="progress-bar">
         <div class="step" [class.active]="step >= 1"></div>
         <div class="step" [class.active]="step >= 2"></div>
@@ -31,6 +34,7 @@
 
             <!-- Datos simulados del paciente -->
             <div class="paciente-info">
+
                 <strong>Ana Paola Vargas Carrera</strong>
 
                 <div class="info">
@@ -45,7 +49,7 @@
             </div>
 
 
-            <button type="button" class="btn-siguiente" (click)="nextStep()">Siguiente</button>
+            <button type="button" class="btn-sig" (click)="nextStep()">Siguiente</button>
         </form>
 
     </div>
@@ -56,6 +60,7 @@
         <h3>Información Socio-Económica</h3>
 
         <div class="form-grid">
+
             <!-- Columna izquierda -->
             <div class="info-group">
                 <label>Ingreso Mensual Aproximado (MXN)</label>
@@ -112,14 +117,36 @@
                     <label><input type="radio" name="afiliacion" /> Servicio Privado</label>
                 </div>
             </div>
+        </div>
 
+
+        <div class="botones">
+            <button type="button" class="btn-anterior" (click)="prevStep()">Regresar</button>
+            <button type="button" class="btn-siguiente" (click)="nextStep()">Predicción</button>
+        </div>
+    </form>
+
+
+
+
+    <div *ngIf="step === 3" class="form-section step3-container">
+
+        <div class="header-text">
+            <h3 class="step3-titulo">Se ha completado la predicción</h3>
+            <p class="descripcion">
+                La probabilidad de que el <br>
+                paciente deserte tratamiento es de:
+            </p>
+        </div>
+
+        <div class="prediction-result">
+            <span class="percentage">70%</span>
         </div>
 
         <div class="botones">
             <button type="button" class="btn-anterior" (click)="prevStep()">Regresar</button>
-            <button type="button" class="btn-siguiente" (click)="nextStep()">Realizar predicción</button>
+            <button type="button" class="btn-siguiente" (click)="step = 1">Finalizar</button>
         </div>
-
-    </form>
+    </div>
 
 </div>

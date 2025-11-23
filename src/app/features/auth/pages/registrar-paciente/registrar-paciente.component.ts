@@ -29,21 +29,31 @@ export class RegistrarPacienteComponent {
   }
 
   nextStep() {
-    this.step = 2;
+    // Si estamos en el paso 1, vamos al 2.
+    if (this.step === 1) {
+      this.step = 2;
+    }
+    // Si estamos en el paso 2, vamos al 3. Aquí iría la validación del formulario.
+    else if (this.step === 2) {
+      // ⚠️ NOTA: Aquí debes llamar a submitAll() para enviar datos y luego mostrar el paso 3.
+      // Por ahora, solo pasaremos al paso 3:
+      this.step = 3;
+    }
   }
 
   prevStep() {
-    this.step = 1;
+    this.step = this.step - 1; // Hacemos que sea flexible: 3 -> 2, 2 -> 1
   }
 
   irARegistroLibre() {
     this.router.navigate(['/pacientes/registro-libre']); // 🟢 Ahora ya reconocido
   }
 
+  // 🟢 submitAll() debe ser la acción final del Paso 2
   submitAll() {
     console.log('Datos socioeconómicos enviados:', this.formStep2.value);
     alert('Predicción realizada exitosamente ✔');
-    this.step = 1;
-    this.formStep2.reset();
+    this.step = 3; // Mostrar el resultado
+    // this.formStep2.reset(); // Puedes comentar o dejar el reset si quieres limpiar los datos
   }
 }
