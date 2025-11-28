@@ -47,7 +47,7 @@
 
 
 .contendor-blackground {
-    background: #ddeffa;
+    background: #ffffff;
     border: 1px solid #b1b1b1;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
@@ -164,6 +164,8 @@
 
 /* --- BOTÓN DE EDICIÓN --- */
 
+/* --- BOTÓN DE EDICIÓN --- */
+
 .btn-editar {
     background-color: #496F96;
     color: white;
@@ -175,11 +177,23 @@
     font-size: 15px;
     transition: background-color 0.2s;
 
+    /* 🟢 CLAVE: Uso de Flexbox para alinear verticalmente el texto y el icono */
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente los elementos internos */
+    justify-content: center;
+    /* Centra horizontalmente el contenido (opcional, si no está 'display: block') */
+
     /* 🟢 CLAVE: Posicionamiento en la esquina inferior derecha del div.socio-economico-der */
     margin-top: 20px;
     margin-left: auto;
     /* Empuja el botón a la derecha */
-    display: block;
+}
+
+/* 🆕 NUEVO: Estilo para el icono para darle un poco de espacio a la izquierda */
+.btn-editar .arrow {
+    margin-left: 8px;
+    /* Espacio entre el texto y el icono */
 }
 
 .btn-editar:hover {

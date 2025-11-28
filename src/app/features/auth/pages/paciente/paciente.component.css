@@ -1,82 +1,211 @@
+/* ---------------------------------------------------------------- */
+/* --- VARIABLES Y BASE GENERAL (Adaptado de tu CSS) --- */
+/* ---------------------------------------------------------------- */
+
+/* Contenedor que centra el bloque de contenido en el área principal */
+.inicio-container,
 .paciente-container {
-    background-color: white;
-    border-radius: 20px;
+    max-width: 950px;
+    margin: 0 auto;
     padding: 20px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: 600;
+/* Estilo de Tarjeta Reutilizable */
+.tarjeta-base {
+    background: #ffffff;
+    border: 1px solid #D4D6DD;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
-.search-bar {
+/* Título de la tarjeta superior (Inicio/Pacientes) */
+.barra-superior .titulo {
+    font-weight: 700;
+    font-size: 22px;
+    color: #1e293b;
+    margin: 0;
+}
+
+/* ---------------------------------------------------------------- */
+/* --- BARRA SUPERIOR (LOGO Y TÍTULO) --- */
+/* ---------------------------------------------------------------- */
+
+.barra-superior {
     display: flex;
     align-items: center;
-    margin: 0 auto 20px;
-    width: 60%;
-    border: 1px solid #b0c4de;
-    border-radius: 10px;
-    padding: 6px 10px;
-    background-color: #f9fbff;
+    gap: 150px;
+    /* Ajustar el padding si es necesario, pero manteniendo la alineación */
+    padding: 10px 0;
 }
 
-.search-bar input {
-    flex: 1;
-    border: none;
-    outline: none;
-    background: transparent;
+/* ---------------------------------------------------------------- */
+/* --- CONTENEDOR PRINCIPAL (Dashboard y Pacientes) --- */
+/* ---------------------------------------------------------------- */
+
+.contendor-blackground {
+    margin-top: 20px;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
+    /* Aumentar el padding interno solo para el contenido principal */
+    background: rgb(255, 255, 255);
+    /* Fondo gris semi-transparente del mockup */
+    border: 1px solid #D4D6DD;
+    border-radius: 12px;
 }
 
-.table-container {
-    background-color: #f1f8ff;
-    border-radius: 15px;
-    padding: 15px;
-}
+/* ---------------------------------------------------------------- */
+/* --- VISTA PACIENTES: CONTROLES SUPERIORES Y TABLA --- */
+/* ---------------------------------------------------------------- */
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-th {
-    text-align: left;
-    padding: 10px;
-    color: #1a3a5f;
-}
-
-td {
-    padding: 10px;
-    background-color: #c6e1ff;
-    border-radius: 10px;
-    margin-bottom: 8px;
-}
-
-.arrow {
-    color: #1a3a5f;
-}
-
-.header {
+/* Contenedor de Controles Superiores (Botón y Buscador) */
+.controles-superiores {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 25px;
+    gap: 20px;
 }
 
+/* Estilo del Botón de Registrar Paciente */
 .btn-registrar {
-    background-color: #4b7ebd;
-    color: white;
-    border: none;
-    padding: 10px 16px;
-    border-radius: 8px;
-    cursor: pointer;
-    font-weight: 600;
     display: flex;
     align-items: center;
     gap: 8px;
-    transition: background-color 0.2s ease;
+    padding: 10px 18px;
+    background-color: #21618C;
+    /* Azul primario */
+    color: white;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    white-space: nowrap;
+    /* Tu estilo original no incluía box-shadow, lo mantengo simple */
 }
 
 .btn-registrar:hover {
-    background-color: #355d8a;
+    background-color: #2563EB;
+}
+
+.btn-registrar svg {
+    color: white;
+    width: 20px;
+    height: 20px;
+}
+
+/* Estilo de la Barra de Búsqueda */
+.search-bar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 400px;
+    width: 100%;
+    /* Tu estilo original de search-bar no se usará aquí. Usamos la implementación moderna: */
+}
+
+.search-bar input[type="text"] {
+    width: 100%;
+    padding: 10px 45px 10px 15px;
+    border: 1px solid #D4D6DD;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1e293b;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #3B82F6;
+}
+
+.search-bar svg {
+    position: absolute;
+    right: 15px;
+    color: #94A3B8;
+    width: 20px;
+    height: 20px;
+}
+
+/* Título de la tabla de datos */
+.tabla-pacientes-titulo {
+    font-size: 20px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 15px;
+}
+
+/* Contenedor de la Tabla (Hereda la apariencia de Tarjeta) */
+.table-container {
+    /* Mantiene .tarjeta-base y solo ajusta el padding */
+    padding: 0;
+    overflow-x: auto;
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px;
+}
+
+.table-container thead th {
+    color: #595D69;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    padding: 15px 20px;
+    border-bottom: 1px solid #D4D6DD;
+    /* Sobrescribe tu estilo 'background-color: #f1f8ff;' */
+    background-color: #ffffff;
+}
+
+.table-container tbody tr {
+    border-bottom: 1px solid #EDEDED;
+    transition: background-color 0.1s;
+}
+
+.table-container tbody tr:hover {
+    background-color: #F8FAFC;
+}
+
+.table-container tbody td {
+    color: #1e293b;
+    font-size: 14px;
+    padding: 15px 20px;
+    /* Elimina tu estilo 'background-color: #c6e1ff;' y 'border-radius: 10px;' */
+    background-color: transparent;
+    border-radius: 0;
+}
+
+/* Columna de Acción (Botón de Enlace/Ver Detalle) */
+.columna-accion {
+    width: 80px;
+    text-align: center;
+}
+
+.btn-link-editar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: #E2E8F0;
+    color: #1e293b;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-link-editar:hover {
+    background-color: #CBD5E1;
+    transform: scale(1.05);
+}
+
+.btn-link-editar svg {
+    width: 16px;
+    height: 16px;
 }

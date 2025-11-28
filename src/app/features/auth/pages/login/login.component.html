@@ -7,6 +7,16 @@
         <p class="app-lema">Sistema Predictivo de Adherencia Terapéutica en Pacientes con Enfermedades Crónicas</p>
     </div>
 
+
+    <head>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+            rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+            integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    </head>
+
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
 
@@ -16,12 +26,38 @@
         </div>
 
         <div class="form-group">
-            <label for="password">Contraseña</label>
 
-            <div class="input-wrapper">
-                <input type="password" id="password">
-                <span class="password-toggle-icon">👁️</span>
-            </div>
+            <body>
+
+                <div class="form-group">
+                    <div class="input-wrapper">
+
+                        <input type="password" class="form-control" id="clave" placeholder="Ingresa tu contraseña">
+
+                        <button class="fas fa-eye-slash password-toggle-icon" type="button" id="verLaClave">
+                        </button>
+
+                    </div>
+                </div>
+
+                <script
+                    src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+                <script>mdc.textField.MDCTextField.attachTo(document.querySelector('.mdc-text-field'));</script>
+
+                <script>
+                    var elCampoDeClave = document.getElementById('clave');
+                    var laClave = document.getElementById('verLaClave');
+
+                    laClave.addEventListener('click', togglePass);
+
+                    function togglePass() {
+                        laClave.classList.toggle('active');
+                        (elCampoDeClave.type == 'password') ? elCampoDeClave.type = 'text' :
+                            elCampoDeClave.type = 'password';
+                    }
+
+                </script>
+            </body>
         </div>
 
         <button class="btn-entrar" routerLink="/pacientes">

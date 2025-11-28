@@ -1,0 +1,121 @@
+<div class="inicio-container">
+
+    <div class="tarjeta-base">
+        <div class="barra-superior">
+            <img src="/LogoHorizontal.png" alt="Logo AdherentIAHorizontal" class="app-logoHorizontal">
+            <h2 class="titulo">Inicio</h2>
+        </div>
+
+    </div>
+    <div class="contendor-blackground">
+        <div class="tabla-scroll">
+
+            <h3 class="resumen-titulo">Resumen General</h3>
+            <p class="resumen-subtitulo">¡Bienvenido! Aquí tienes un breve resumen sobre los pacientes actuales.</p>
+
+            <div class="metricas-superiores">
+
+                <div class="tarjeta-metrica">
+                    <p class="metrica-nombre">Pacientes Monitoreados</p>
+                    <p class="metrica-valor-1">120</p>
+                </div>
+
+                <div class="tarjeta-metrica">
+                    <p class="metrica-nombre">Riesgo Alto Detectado</p>
+                    <p class="metrica-valor riesgo-alto">33</p>
+                    <p class="metrica-detalle">▲ Requieren atención inmediata</p>
+                </div>
+
+                <div class="tarjeta-metrica">
+                    <p class="metrica-nombre">Tasa de Adherencia</p>
+                    <p class="metrica-valor">88%</p>
+                    <p class="metrica-detalle">↗ +2% respecto al mes pasado</p>
+                </div>
+
+            </div>
+
+            <div class="contenedor-graficas-fila">
+
+                <div class="tarjeta-base contenedor-grafica-barras">
+                    <h3 class="grafica-titulo">Predicción de Abandono (Últimos 4 meses)</h3>
+                    <div class="grafica-barras-css">
+                        <div class="grupo-barras" style="--mes: 'Julio'">
+                            <div class="barra-adherentes" style="--height: 75%"></div>
+                            <div class="barra-abandono" style="--height: 25%"></div>
+                        </div>
+                        <div class="grupo-barras" style="--mes: 'Agosto'">
+                            <div class="barra-adherentes" style="--height: 70%"></div>
+                            <div class="barra-abandono" style="--height: 30%"></div>
+                        </div>
+                        <div class="grupo-barras" style="--mes: 'Septiembre'">
+                            <div class="barra-adherentes" style="--height: 80%"></div>
+                            <div class="barra-abandono" style="--height: 20%"></div>
+                        </div>
+                        <div class="grupo-barras" style="--mes: 'Octubre'">
+                            <div class="barra-adherentes" style="--height: 68%"></div>
+                            <div class="barra-abandono" style="--height: 32%"></div>
+                        </div>
+                    </div>
+                    <div class="leyenda-barras">
+                        <span class="leyenda-item"><i class="color-adherentes"></i> Pacientes Adherentes</span>
+                        <span class="leyenda-item"><i class="color-abandono"></i> Abandono Predicho</span>
+                    </div>
+                </div>
+
+                <div class="tarjeta-base contenedor-grafica-dona">
+                    <h3 class="grafica-titulo">Distribución de Riesgo Actual</h3>
+                    <div class="grafica-dona-css">
+                    </div>
+                    <div class="leyenda-dona">
+                        <span class="leyenda-item"><i class="color-riesgo-bajo"></i> Riesgo Bajo</span>
+                        <span class="leyenda-item"><i class="color-riesgo-medio"></i> Riesgo Medio</span>
+                        <span class="leyenda-item"><i class="color-riesgo-alto"></i> Riesgo Alto</span>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="tarjeta-base contenedor-tabla-pacientes">
+                <h3 class="tabla-titulo">Pacientes con alerta de Abandono (Detectado hoy)</h3>
+
+                <table class="tabla-alerta">
+                    <thead>
+                        <tr>
+                            <th>ID Paciente</th>
+                            <th>Nombre</th>
+                            <th>Predicción (IA)</th>
+                            <th>Factor de riesgo principal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Ana Paola Vargas</td>
+                            <td><span class="prediccion-etiqueta medio">70% Medio</span></td>
+                            <td>Falta de visitas previas</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Juan Pérez López</td>
+                            <td><span class="prediccion-etiqueta medio">65% Medio</span></td>
+                            <td>Cambio de medicamento reciente</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>María Elena Sánchez</td>
+                            <td><span class="prediccion-etiqueta alto">85% Alto</span></td>
+                            <td>No asistió a cita agendada</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>Roberto Gómez</td>
+                            <td><span class="prediccion-etiqueta medio">70% Medio</span></td>
+                            <td>Falta de visitas previas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
