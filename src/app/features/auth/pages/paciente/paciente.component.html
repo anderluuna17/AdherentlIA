@@ -1,0 +1,126 @@
+<div class="paciente-container">
+
+    <!-- Tarjeta Superior (Logo y Título) -->
+    <div class="tarjeta-base">
+        <div class="barra-superior">
+            <!-- Nota: La URL del logo debe ajustarse si no está en la raíz -->
+            <img src="/LogoHorizontal.png" alt="Logo AdherentIAHorizontal" class="app-logoHorizontal">
+            <h2 class="titulo">Pacientes</h2>
+        </div>
+    </div>
+
+    <!-- Contenedor Principal del Dashboard -->
+    <div class="contendor-blackground">
+
+        <!-- Contenedor de Controles Superiores (Botón y Buscador) -->
+        <div class="controles-superiores">
+            <!-- Botón Registrar Paciente -->
+            <!-- Usamos un div con la clase btn-registrar en lugar de button y routerLink -->
+            <button class="btn-registrar" routerLink="/pacientes/registrar">
+                <!-- Usamos SVG para el icono ya que "material-icons" requiere una fuente externa -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon-tabler icons-tabler-outline icon-tabler-user-plus">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                    <path d="M16 19h6" />
+                    <path d="M19 16v6" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4" />
+                </svg>
+                Registrar Paciente
+            </button>
+
+            <!-- Barra de Búsqueda -->
+            <div class="search-bar">
+                <input type="text" placeholder="Ingrese el nombre o ID del paciente..." />
+                <!-- Icono de Búsqueda -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                    class="icon-tabler icons-tabler-outline icon-tabler-search">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                    <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+                    <path d="M21 21l-6 -6" />
+                </svg>
+            </div>
+        </div>
+
+        <!-- Título de la tabla de datos -->
+        <h3 class="tabla-pacientes-titulo">Pacientes actuales</h3>
+
+        <!-- Contenedor de la Tabla -->
+        <div class="table-container tarjeta-base">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Paciente</th>
+                        <th>Nombre</th>
+                        <th>Fecha de nacimiento</th>
+                        <!-- Columna vacía para el botón de acción/link -->
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Fila 1 (Estatica) -->
+                    <tr>
+                        <td>1</td>
+                        <td>Ana Paola Vargas</td>
+                        <td>16/06/2004</td>
+                        <td class="columna-accion">
+                            <!-- Botón de Enlace/Editar -->
+                            <button class="btn-link-editar" routerLink="/pacientes/editar-paciente">
+
+                                <!-- Icono de Flecha de Enlace (SVG) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon-tabler icons-tabler-outline icon-tabler-arrow-up-right">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M17 7l-10 10" />
+                                    <path d="M8 7l9 0l0 9" />
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Fila 2 (Estatica) -->
+                    <tr>
+                        <td>2</td>
+                        <td>Ander Arturo Luna Díaz</td>
+                        <td>16/06/2004</td>
+                        <td class="columna-accion">
+                            <button class="btn-link-editar" routerLink="/pacientes/editar-paciente">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon-tabler icons-tabler-outline icon-tabler-arrow-up-right">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M17 7l-10 10" />
+                                    <path d="M8 7l9 0l0 9" />
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                    <!-- Fila 3 (Estatica) -->
+                    <tr>
+                        <td>3</td>
+                        <td>Roberto Carlos</td>
+                        <td>16/06/2004</td>
+                        <td class="columna-accion">
+                            <button class="btn-link-editar" routerLink="/pacientes/editar-paciente">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                    class="icon-tabler icons-tabler-outline icon-tabler-arrow-up-right">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M17 7l-10 10" />
+                                    <path d="M8 7l9 0l0 9" />
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
