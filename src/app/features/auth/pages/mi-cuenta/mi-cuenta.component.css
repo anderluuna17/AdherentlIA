@@ -1,0 +1,159 @@
+/* ---------------------------------------------------------------- */
+/* --- CONTENEDOR Y BASE DE TARJETA --- */
+/* ---------------------------------------------------------------- */
+
+/* Contenedor que centra el bloque de contenido en el área principal */
+.mi-cuenta-container {
+    max-width: 950px;
+    margin: 0 auto;
+    /* Centra horizontalmente el bloque de contenido */
+    padding: 20px;
+}
+
+/* Estilo de Tarjeta Reutilizable */
+.tarjeta-base {
+    background: #ffffff;
+    border: 1px solid #D4D6DD;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------------- */
+/* --- TARJETA 1: BARRA SUPERIOR (LOGO Y TÍTULO) --- */
+/* ---------------------------------------------------------------- */
+
+.barra-superior-layout {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 20px;
+    margin-bottom: 50px;
+}
+
+.barra-superior-layout .app-logoHorizontal {
+    height: 70px;
+    width: auto;
+}
+
+.barra-superior-layout .titulo {
+    font-size: 1.25rem;
+    color: #496F96;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------------------- */
+/* --- TARJETA 2: PERFIL INFO PRINCIPAL (CLAVE) --- */
+/* ---------------------------------------------------------------- */
+
+.contendor-perfil-info {
+    padding: 150px;
+    /* 🟢 CLAVE: Establece el contexto de posicionamiento para el botón 'Editar' */
+    position: relative;
+}
+
+/* 🟢 BOTÓN EDITAR (Posición Absoluta) */
+.btn-editar {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background-color: #496F96;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.2s;
+
+    /* 🟢 CLAVE: Estas dos líneas alinean verticalmente el texto y el icono */
+    display: flex;
+    align-items: center;
+}
+
+/* 🆕 NUEVA REGLA: Añadir margen al icono para separarlo del texto */
+.btn-editar .arrow {
+    margin-left: 5px;
+    /* Pequeño espacio a la izquierda del icono */
+    font-size: 18px;
+    /* Opcional: Ajustar el tamaño del icono para que se alinee mejor con el texto de 14px */
+}
+
+/* 🟢 CONTENEDOR CENTRAL DE AVATAR E INFO */
+.perfil-avatar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra el avatar, nombre y rol */
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* 🟢 AVATAR GRANDE Y CIRCULO DE AÑADIR */
+.avatar-grande {
+    position: relative;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.avatar-icono {
+    font-size: 100px;
+    /* Tamaño del icono principal */
+    color: #496F96;
+}
+
+.avatar-add {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 28px;
+    color: #496F96;
+    background-color: white;
+    border-radius: 50%;
+}
+
+/* 🟢 NOMBRE Y ROL */
+.perfil-nombre {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1e3857;
+    margin: 0;
+}
+
+.perfil-rol {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin: 5px 0 0 0;
+}
+
+/* 🟢 CERRAR SESIÓN */
+.cerrar-sesion-wrapper {
+    text-align: right;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.btn-cerrar-sesion {
+    display: inline-flex;
+    align-items: center;
+    color: #d9534f;
+    /* Rojo */
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-cerrar-sesion .material-icons {
+    /* Rota la flecha para que apunte a la izquierda */
+    transform: rotate(180deg);
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.btn-cerrar-sesion:hover {
+    color: #c9302c;
+}
