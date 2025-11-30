@@ -18,41 +18,47 @@
     </div>
 
     <div class="step1-container">
-        <!-- PASO 1 -->
+        <div class="tabla-scroll">
 
-        <form *ngIf="step === 1">
+            <!-- PASO 1 -->
+
+            <form *ngIf="step === 1">
 
 
-            <h3>Selecciona un Paciente</h3>
-            <p class="descripcion">Para registrar los datos adicionales de un paciente existente debe buscarlo.</p>
+                <h3>Selecciona un Paciente</h3>
+                <p class="descripcion">Para registrar los datos adicionales de un paciente existente debe buscarlo.</p>
 
-            <!-- Barra de búsqueda -->
-            <div class="search-container">
-                <input type="text" placeholder="Ingrese el nombre o ID del paciente..." />
-                <span class="material-icons">search</span>
-            </div>
-
-            <!-- Datos simulados del paciente -->
-            <div class="paciente-info">
-
-                <strong>Ana Paola Vargas Carrera</strong>
-
-                <div class="info">
-                    <p><b>ID:</b> 1</p>
-                    <p><b>Fecha de Nacimiento:</b> 15/07/2004</p>
-                    <p><b>CURP:</b> LJFYWO980009</p>
+                <!-- Barra de búsqueda -->
+                <div class="search-container">
+                    <input type="text" placeholder="Ingrese el nombre o ID del paciente..." />
+                    <span class="material-icons">search</span>
                 </div>
 
-                <a class="historial">
-                    Ir al historial clínico ↗
-                </a>
-            </div>
+                <!-- Datos simulados del paciente -->
+                <div class="paciente-info">
+
+                    <strong>Ana Paola Vargas Carrera</strong>
+
+                    <div class="info">
+                        <p><b>ID:</b> 1</p>
+                        <p><b>Fecha de Nacimiento:</b> 15/07/2004</p>
+                        <p><b>CURP:</b> LJFYWO980009</p>
+                    </div>
+
+                    <a class="historial">
+                        Ir al historial clínico ↗
+                    </a>
+                </div>
 
 
-            <button type="button" class="btn-sig" (click)="nextStep()">Siguiente</button>
-        </form>
+                <button type="button" class="btn-sig" (click)="nextStep()">Siguiente</button>
+            </form>
+
+        </div>
+
 
     </div>
+
 
     <!-- Paso 2 -->
     <form *ngIf="step === 2" class="form-section step2-form">
@@ -145,7 +151,7 @@
 
         <div class="botones">
             <button type="button" class="btn-anterior" (click)="prevStep()">Regresar</button>
-            <button type="button" class="btn-siguiente" (click)="step = 1">Finalizar</button>
+            <button type="button" class="btn-siguiente" routerLink="/pacientes">Finalizar</button>
         </div>
     </div>
 

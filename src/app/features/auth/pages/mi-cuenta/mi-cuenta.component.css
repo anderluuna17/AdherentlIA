@@ -1,0 +1,289 @@
+/* ---------------------------------------------------------------- */
+/* --- CONTENEDOR Y BASE DE TARJETA --- */
+/* ---------------------------------------------------------------- */
+
+/* Contenedor que centra el bloque de contenido en el área principal */
+.mi-cuenta-container {
+    max-width: 950px;
+    margin: 0 auto;
+    /* Centra horizontalmente el bloque de contenido */
+    padding: 20px;
+    position: relative;
+}
+
+/* Estilo de Tarjeta Reutilizable */
+.tarjeta-base {
+    background: #ffffff;
+    border: 1px solid #D4D6DD;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------------- */
+/* --- TARJETA 1: BARRA SUPERIOR (LOGO Y TÍTULO) --- */
+/* ---------------------------------------------------------------- */
+
+.barra-superior-layout {
+    display: flex;
+    align-items: center;
+    gap: 150px;
+    padding: 15px 20px;
+    margin-bottom: 50px;
+}
+
+.barra-superior-layout .app-logoHorizontal {
+    height: 70px;
+    width: auto;
+}
+
+.barra-superior-layout .titulo {
+    font-size: 1.25rem;
+    color: #496F96;
+    font-weight: 600;
+}
+
+/* ---------------------------------------------------------------- */
+/* --- TARJETA 2: PERFIL INFO PRINCIPAL (CLAVE) --- */
+/* ---------------------------------------------------------------- */
+
+.contendor-perfil-info {
+    padding: 120px;
+    /* CLAVE: Establece el contexto de posicionamiento para el botón 'Editar' */
+    position: relative;
+}
+
+/* BOTÓN EDITAR (Posición Absoluta) */
+.btn-editar {
+    position: absolute;
+    top: 70px;
+    /* Ajuste: Lo muevo más arriba */
+    right: 150px;
+    /* Ajuste: Lo muevo más a la derecha */
+    background-color: #21618C;
+    /* Usamos el azul corporativo */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+}
+
+.btn-editar:hover {
+    background-color: #185984;
+}
+
+/* Icono dentro del botón Editar */
+.btn-editar svg {
+    margin-left: 5px;
+    width: 16px;
+    height: 16px;
+    stroke: white;
+    /* Asegura que el SVG sea blanco */
+}
+
+/* CONTENEDOR CENTRAL DE AVATAR E INFO */
+.perfil-avatar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 40px;
+    /* Aumento margen inferior */
+}
+
+/* AVATAR GRANDE Y CIRCULO DE AÑADIR */
+.avatar-grande {
+    position: relative;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.avatar-icono {
+    /* El tamaño se define en el SVG, pero aquí ajustamos el color */
+    color: #94A3B8;
+    /* Gris suave */
+}
+
+.avatar-add {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    font-size: 28px;
+    color: #3B82F6;
+    /* Azul corporativo */
+    background-color: white;
+    border-radius: 50%;
+    /* Sombra suave para que destaque */
+    box-shadow: 0 0 0 2px white;
+}
+
+/* NOMBRE Y ROL */
+.perfil-nombre {
+    font-size: 28px;
+    /* Ajuste de tamaño */
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.perfil-rol {
+    font-size: 16px;
+    color: #595D69;
+    margin: 5px 0 0 0;
+}
+
+/* CERRAR SESIÓN */
+.cerrar-sesion-wrapper {
+    text-align: right;
+    padding-top: 20px;
+    /* Más padding para separación */
+    border-top: 1px solid #EDEDED;
+    /* Línea divisoria más sutil */
+}
+
+.btn-cerrar-sesion {
+    display: inline-flex;
+    align-items: center;
+    color: #E64343;
+    /* Rojo para acción de riesgo/salir */
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.btn-cerrar-sesion svg {
+    /* Usamos el icono de Logout y lo rotamos */
+    transform: rotate(0deg);
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    stroke: #E64343;
+}
+
+.btn-cerrar-sesion:hover {
+    color: #c9302c;
+}
+
+/* ---------------------------------------------------------------- */
+/* --- MODAL ESTÁTICO (Utilizando Checkbox Hack) --- */
+/* ---------------------------------------------------------------- */
+
+/* Fondo oscuro del modal */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    /* Oscuridad más pronunciada */
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+    /* Detrás del modal */
+}
+
+/* Caja del modal */
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #ffffff;
+    /* Fondo blanco para consistencia */
+    border-radius: 12px;
+    padding: 25px;
+    display: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    z-index: 20;
+}
+
+/* Título + botón cerrar */
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Eliminamos el background azul y padding extra para hacerlo más simple */
+    padding: 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #EDEDED;
+}
+
+.modal-header h3 {
+    margin: 0;
+    color: #1E3857;
+    font-size: 20px;
+    font-weight: 700;
+    padding-bottom: 10px;
+}
+
+.close-btn {
+    font-size: 24px;
+    cursor: pointer;
+    color: #595D69;
+}
+
+/* Inputs */
+.label-input {
+    font-weight: 600;
+    margin-top: 15px;
+    display: block;
+    color: #1e293b;
+    font-size: 14px;
+}
+
+.campo-input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #D4D6DD;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    box-sizing: border-box;
+    resize: vertical;
+    min-height: 40px;
+}
+
+textarea.campo-input {
+    min-height: 100px;
+}
+
+/* Botón Guardar */
+.btn-guardar {
+    background: #21618C;
+    color: white;
+    border: none;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.2s;
+
+    display: block;
+    /* 👉 Botón toma su propia línea */
+    width: 70%;
+    max-width: 260px;
+    min-width: 180px;
+    margin: 20px auto 0;
+    /* 👉 Auto lo centra */
+    text-align: center;
+}
+
+.btn-guardar:hover {
+    background-color: #185984;
+}
+
+/* Activar modal cuando checkbox está marcado */
+#modal-toggle:checked~.modal-overlay,
+#modal-toggle:checked~.modal {
+    display: block;
+}
