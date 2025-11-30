@@ -1,0 +1,64 @@
+<div class="registrar-paciente">
+
+    <h2 class="titulo">Registro de paciente (Libre)</h2>
+
+    <!-- PASO ÚNICO: Formulario de texto -->
+    <form class="form-section">
+
+        <h3>Datos del Paciente</h3>
+
+        <div class="form-grid">
+
+            <!-- Columna izquierda -->
+            <div class="info-group">
+                <label>Nombre del Paciente</label>
+                <input type="text" placeholder="Escribe el nombre completo...">
+
+                <label>ID</label>
+                <input type="text" placeholder="ID del paciente...">
+
+                <label>Fecha de Nacimiento</label>
+                <input type="text" placeholder="Ej: 15/07/2004">
+
+                <label>CURP</label>
+                <input type="text" placeholder="Escribe la CURP...">
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="info-group">
+                <label>Ocupación</label>
+                <input type="text" placeholder="Escribe una ocupación...">
+
+                <label>Residencia</label>
+                <input type="text" placeholder="Ej: Urbano / Rural / Dirección...">
+
+                <label>Estado Civil</label>
+                <input type="text" placeholder="Ej: Casado, Soltero...">
+
+                <label>Número de Hijos</label>
+                <input type="text" placeholder="Cantidad...">
+            </div>
+
+        </div>
+
+        <h3>Servicios de Salud</h3>
+
+        <label>Afiliación</label>
+        <input type="text" placeholder="Ej: IMSS, ISSSTE, Particular...">
+
+        <h3>Información Económica</h3>
+
+        <label>Ingreso Mensual (MXN)</label>
+        <input type="text" placeholder="Ej: 5000...">
+
+        <label>Costo mensual del tratamiento (MXN)</label>
+        <input type="text" placeholder="Ej: 1500...">
+
+        <div class="botones">
+            <button type="button" class="btn-anterior" routerLink="/pacientes/registrar">Regresar</button>
+            <button type="button" class="btn-siguiente">Guardar Registro</button>
+        </div>
+
+    </form>
+
+</div>

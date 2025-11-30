@@ -1,0 +1,14 @@
+.auth-layout-container {
+    /* Ocupa todo el alto de la vista (viewport height) */
+    min-height: 100vh;
+
+    /* Centra el formulario de login horizontal y verticalmente */
+    display: flex;
+    justify-content: center;
+    /* Centrado horizontal */
+    align-items: center;
+    /* Centrado vertical */
+
+    /* Puedes poner un color de fondo si lo deseas */
+    background-color: #ffffff;
+}

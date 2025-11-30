@@ -1,0 +1,158 @@
+<div class="registrar-paciente">
+
+    <div class="barra-superior">
+        <img src="/LogoHorizontal.png" alt="Logo AdherentIAHorizontal" class="app-logoHorizontal">
+        <h2 class="titulo">Registro de paciente</h2>
+
+    </div>
+    <!-- ><button class="btn-ejemplo" routerLink="/pacientes/registro-libre">
+        <span class="material-icons">edit_square</span>
+        Registro libre
+    </button>
+
+     Barra de progreso -->
+    <div class="progress-bar">
+        <div class="step" [class.active]="step >= 1"></div>
+        <div class="step" [class.active]="step >= 2"></div>
+        <div class="step" [class.active]="step >= 3"></div>
+    </div>
+
+    <div class="step1-container">
+        <div class="tabla-scroll">
+
+            <!-- PASO 1 -->
+
+            <form *ngIf="step === 1">
+
+
+                <h3>Selecciona un Paciente</h3>
+                <p class="descripcion">Para registrar los datos adicionales de un paciente existente debe buscarlo.</p>
+
+                <!-- Barra de búsqueda -->
+                <div class="search-container">
+                    <input type="text" placeholder="Ingrese el nombre o ID del paciente..." />
+                    <span class="material-icons">search</span>
+                </div>
+
+                <!-- Datos simulados del paciente -->
+                <div class="paciente-info">
+
+                    <strong>Ana Paola Vargas Carrera</strong>
+
+                    <div class="info">
+                        <p><b>ID:</b> 1</p>
+                        <p><b>Fecha de Nacimiento:</b> 15/07/2004</p>
+                        <p><b>CURP:</b> LJFYWO980009</p>
+                    </div>
+
+                    <a class="historial">
+                        Ir al historial clínico ↗
+                    </a>
+                </div>
+
+
+                <button type="button" class="btn-sig" (click)="nextStep()">Siguiente</button>
+            </form>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- Paso 2 -->
+    <form *ngIf="step === 2" class="form-section step2-form">
+
+        <h3>Información Socio-Económica</h3>
+
+        <div class="form-grid">
+
+            <!-- Columna izquierda -->
+            <div class="info-group">
+                <label>Ingreso Mensual Aproximado (MXN)</label>
+                <input type="number" min="0" placeholder="0.00" />
+
+                <label>Nivel de Estudios</label>
+                <select>
+                    <option>Ninguno Seleccionado</option>
+                    <option>Ninguno</option>
+                    <option>Básico (Primaria/Secundaria)</option>
+                    <option>Medio Superior (Preparatoria)</option>
+                    <option>Superior (Licenciatura o más)</option>
+                </select>
+
+                <label>Costo mensual de tratamiento (MXN)</label>
+                <input type="number" min="0" placeholder="0.00" />
+
+                <label>Ocupación *</label>
+                <select>
+                    <option>Ninguno Seleccionado</option>
+                    <option>Empleado</option>
+                    <option>Desempleado</option>
+                    <option>Persona trabajadora del hogar</option>
+                    <option>Jubilad(a)</option>
+                </select>
+            </div>
+
+            <!-- Columna derecha -->
+            <div class="info-group">
+                <label>Residencia</label>
+                <select>
+                    <option>Ninguno Seleccionado</option>
+                    <option>Urbano</option>
+                    <option>Rural</option>
+                </select>
+
+                <label>Estado Civil</label>
+                <select>
+                    <option>Ninguno Seleccionado</option>
+                    <option>Soltero</option>
+                    <option>Casado</option>
+                    <option>Divorciado</option>
+                    <option>Viudo</option>
+                    <option>Unión libre</option>
+                </select>
+
+                <label>Número de hijos</label>
+                <input type="number" min="0" />
+
+                <label>Afiliación a servicios de salud</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="afiliacion" /> IMMS</label>
+                    <label><input type="radio" name="afiliacion" /> ISSSTE</label>
+                    <label><input type="radio" name="afiliacion" /> Servicio Privado</label>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="botones">
+            <button type="button" class="btn-anterior" (click)="prevStep()">Regresar</button>
+            <button type="button" class="btn-siguiente" (click)="nextStep()">Predicción</button>
+        </div>
+    </form>
+
+
+
+
+    <div *ngIf="step === 3" class="form-section step3-container">
+
+        <div class="header-text">
+            <h3 class="step3-titulo">Se ha completado la predicción</h3>
+            <p class="descripcion">
+                La probabilidad de que el <br>
+                paciente deserte tratamiento es de:
+            </p>
+        </div>
+
+        <div class="prediction-result">
+            <span class="percentage">70%</span>
+        </div>
+
+        <div class="botones">
+            <button type="button" class="btn-anterior" (click)="prevStep()">Regresar</button>
+            <button type="button" class="btn-siguiente" routerLink="/pacientes">Finalizar</button>
+        </div>
+    </div>
+
+</div>
