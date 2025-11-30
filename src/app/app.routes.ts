@@ -10,6 +10,8 @@ import { RegistrarPacienteComponent } from './features/auth/pages/registrar-paci
 import { RegistroLibreComponent } from './features/auth/pages/registro-libre/registro-libre.component';
 import { EditarPacienteComponent } from './features/auth/pages/editar-paciente/editar-paciente.component';
 import { EditarInformacionPacienteComponent } from './features/auth/pages/editar-informacion-paciente/editar-informacion-paciente.component';
+import { InicioComponent } from './features/auth/pages/inicio/inicio.component';
+import { MiCuentaComponent } from './features/auth/pages/mi-cuenta/mi-cuenta.component';
 
 
 export const routes: Routes = [
@@ -25,7 +27,14 @@ export const routes: Routes = [
         ]
     },
 
-
+    // 3. RUTA DE INICIO (HOME) - Debe ser de primer nivel y usar el MainLayout
+    {
+        path: 'home', // 🟢 AHORA SÍ existe la ruta /home
+        component: MainLayoutComponent,
+        children: [
+            { path: '', component: InicioComponent }
+        ]
+    },
     // ruta principal para mostrar pantalla pacientes
     {
         path: 'pacientes',
@@ -36,7 +45,9 @@ export const routes: Routes = [
             { path: 'registrar', component: RegistrarPacienteComponent },
             { path: 'registro-libre', component: RegistroLibreComponent },
             { path: 'editar-paciente', component: EditarPacienteComponent },
-            { path: 'info', component: EditarInformacionPacienteComponent }
+            { path: 'info', component: EditarInformacionPacienteComponent },
+            { path: 'mi-cuenta', component: MiCuentaComponent }
+            //{ path: 'home', component: InicioComponent }
 
             // Otras rutas
             // { path: 'reportes', component: ReporteComponent },
@@ -45,5 +56,6 @@ export const routes: Routes = [
 
 
 
-    { path: '**', redirectTo: 'auth/login' }
+    { path: '**', redirectTo: 'auth/login' },
+    { path: '**', redirectTo: 'auth/signup' },
 ];
