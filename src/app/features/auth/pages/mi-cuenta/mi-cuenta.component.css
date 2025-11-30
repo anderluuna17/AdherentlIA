@@ -29,7 +29,7 @@
 .barra-superior-layout {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 150px;
     padding: 15px 20px;
     margin-bottom: 50px;
 }
@@ -58,9 +58,9 @@
 /* BOTÓN EDITAR (Posición Absoluta) */
 .btn-editar {
     position: absolute;
-    top: 30px;
+    top: 70px;
     /* Ajuste: Lo muevo más arriba */
-    right: 30px;
+    right: 150px;
     /* Ajuste: Lo muevo más a la derecha */
     background-color: #21618C;
     /* Usamos el azul corporativo */

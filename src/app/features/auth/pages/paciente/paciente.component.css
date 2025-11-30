@@ -5,7 +5,7 @@
 /* Contenedor que centra el bloque de contenido en el área principal */
 .inicio-container,
 .paciente-container {
-    max-width: 950px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: 20px;
 }
@@ -17,7 +17,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     padding: 20px;
-    width: 100%;
+    width: auto;
     box-sizing: border-box;
 }
 
@@ -46,7 +46,7 @@
 /* ---------------------------------------------------------------- */
 
 .contendor-blackground {
-    margin-top: 20px;
+    margin-top: 5%;
     max-width: 950px;
     margin-left: auto;
     margin-right: auto;
