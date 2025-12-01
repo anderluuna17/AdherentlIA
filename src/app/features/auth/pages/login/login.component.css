@@ -102,19 +102,6 @@
     font-size: 16px;
 }
 
-/* Contenedor del input y el ícono */
-.input-wrapper {
-    position: relative;
-    /* Es la referencia para el ícono absoluto */
-    width: 100%;
-}
-
-/* Asegura que el input dentro del wrapper ocupe todo el ancho */
-.input-wrapper input {
-    width: 100%;
-    padding-right: 40px;
-    /* IMPORTANTE: Deja espacio para el ícono */
-}
 
 /* Posiciona el ícono dentro del input */
 .password-toggle-icon {
@@ -136,4 +123,41 @@
     padding: 0;
     z-index: 10;
     /* Para asegurar que esté por encima de otros elementos */
+}
+
+/* Contenedor del input de contraseña */
+.password-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Input con espacio a la derecha para el ícono */
+.password-container input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px;
+    /* Espacio para el ícono */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Botón del ojo */
+.icon-eye {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666;
+    padding: 0;
+}
+
+.icon-eye:hover {
+    color: #000;
 }
