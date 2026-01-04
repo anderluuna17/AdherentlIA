@@ -8,7 +8,6 @@ import { Router } from '@angular/router';
 })
 export class RegistroLibreComponent {
 
-  // Objeto para capturar toda la información
   pacienteLibre = {
     nombre: '',
     id: '',

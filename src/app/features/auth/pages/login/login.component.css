@@ -1,62 +1,43 @@
-/* Contenedor principal para centrar la caja de login en la pantalla */
 .main-screen-container {
     display: flex;
-    /* Habilita Flexbox */
     width: 1000px;
-    /* O el ancho que desees para la tarjeta */
     height: 700px;
-    /* O el alto que desees */
     margin: 10px auto;
-    /* Centra horizontalmente la tarjeta */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     overflow: hidden;
-    /* Importante para los bordes redondeados */
     background-color: white;
 }
 
-/* Contenedor Izquierdo: Fondo azul y contenido centrado */
 .presentacion-container {
     flex: 1;
-    /* Ocupa la mitad del espacio disponible */
     background-color: #375D81;
-    /* Color azul de fondo */
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Centra verticalmente */
     align-items: center;
-    /* Centra horizontalmente */
     padding: 50px;
     text-align: center;
 }
 
-/* Contenedor Derecho: Login */
 .login-container {
     flex: 1;
-    /* Ocupa la otra mitad */
     padding: 80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Centra el contenido verticalmente */
 }
 
-/* Estilo del logo */
 .app-logo {
     width: 250px;
-    /* Ajusta el tamaño */
     height: auto;
     margin-bottom: 30px;
-    /* Para dar el color blanco al icono si es un archivo SVG o para ajustar la opacidad */
     opacity: .9;
 }
 
-/* Estilo del botón (tomado de tu ejemplo) */
 .btn-entrar {
     background-color: #496F96;
-    /* Color azul del botón */
     color: white;
     border: none;
     padding: 10px 15px;
@@ -64,87 +45,60 @@
     cursor: pointer;
     font-size: 16px;
     margin-top: 20px;
-    /* Espacio debajo de los campos */
 }
 
-/* Contenedor de cada par de campo y etiqueta */
 .form-group {
-    /* Muestra los hijos (label y input) en una columna */
     display: flex;
     flex-direction: column;
-
-    /* Agrega espacio entre los grupos de formularios */
     margin-bottom: 25px;
 }
 
-/* Asegura que la etiqueta tenga el tamaño de fuente y color correcto (opcional) */
 .form-group label {
     font-size: 16px;
     font-weight: 500;
-    /* Hace que el texto sea semi-negro */
     color: #333;
-    /* Color oscuro para el texto */
     margin-bottom: 8px;
-    /* Espacio entre el título y la caja de texto */
 }
 
-/* Estilo para las cajas de texto (Input) */
 .form-group input {
-    /* Hace que la caja de texto ocupe todo el ancho del contenedor */
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
-    /* Borde simple y visible */
     border-radius: 5px;
-    /* Bordes ligeramente redondeados */
     box-sizing: border-box;
-    /* Asegura que padding no añada ancho extra */
     font-size: 16px;
 }
 
-
-/* Posiciona el ícono dentro del input */
 .password-toggle-icon {
-    /* **Sobrescribe** la posición del botón */
     position: absolute !important;
     top: 50% !important;
     right: 15px !important;
-    /* Ajusta este valor para más o menos espacio desde el borde */
     transform: translateY(-50%) !important;
-
-    /* Estilos que ya tenías */
     cursor: pointer;
     color: #666;
     font-size: 18px;
-
-    /* Asegúrate de que no tenga bordes o fondo por defecto */
     background: none;
     border: none;
     padding: 0;
     z-index: 10;
-    /* Para asegurar que esté por encima de otros elementos */
 }
 
-/* Contenedor del input de contraseña */
 .password-container {
     position: relative;
     display: flex;
     align-items: center;
 }
 
-/* Input con espacio a la derecha para el ícono */
 .password-container input {
     width: 100%;
     padding: 10px;
     padding-right: 40px;
-    /* Espacio para el ícono */
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 16px;
 }
 
-/* Botón del ojo */
 .icon-eye {
     position: absolute;
     right: 12px;

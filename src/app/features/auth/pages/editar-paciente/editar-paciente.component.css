@@ -1,15 +1,9 @@
-/* --- LAYOUT PRINCIPAL Y BARRA DE BÚSQUEDA --- */
-
 .paciente-editar-container {
-    /* CLAVE: Usar max-width para que la tarjeta se centre en el área de contenido */
     max-width: 950px;
     margin: 0 auto;
     padding: 20px;
 }
 
-
-
-/* TÍTULO Y BARRA SUPERIOR */
 .barra-superior {
     display: flex;
     align-items: center;
@@ -17,12 +11,9 @@
     margin-bottom: 50px;
 }
 
-/* Barra de búsqueda (Centrada) */
 .search-bar {
     max-width: 650px;
-    /* Ancho para la barra */
     margin: 20px auto 40px auto;
-    /* Centrar y margen inferior */
     display: flex;
     align-items: center;
     border: 1px solid #ccc;
@@ -44,8 +35,6 @@
     cursor: pointer;
 }
 
-
-
 .contendor-blackground {
     background: #ffffff;
     border: 1px solid #b1b1b1;
@@ -53,8 +42,6 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
     padding: 70px;
 }
-
-/* --- TARJETA DE CONTENIDO (INFO-CARD) --- */
 
 .info-card {
     background: #EBF5FB;
@@ -64,15 +51,12 @@
     padding: 30px;
 }
 
-/* Grid para las dos columnas principales (Izquierda y Derecha) */
 .data-grid {
     display: grid;
-    /* Dos columnas, cada una ocupando la mitad del espacio */
     grid-template-columns: 1fr 1fr;
     gap: 30px;
 }
 
-/* Estilos de encabezados y títulos */
 .nombre-paciente {
     font-size: 18px;
     font-weight: 700;
@@ -88,7 +72,6 @@
 }
 
 .desercion-prob .percent {
-    /* Color naranja para el porcentaje, como en el mockup */
     color: #F89B2B;
     font-weight: 800;
 }
@@ -109,9 +92,6 @@
     margin-top: 5px;
 }
 
-
-/* --- SECCIÓN SOCIO-ECONÓMICA (Línea Divisoria y Bullets) --- */
-
 .seccion-titulo {
     font-size: 16px;
     font-weight: 700;
@@ -119,11 +99,8 @@
     margin-top: 25px;
     margin-bottom: 15px;
     padding-top: 15px;
-
-    /* 🟢 CLAVE: La línea divisoria superior */
     border-top: 1px solid #e1e4eb;
     grid-column: span 2;
-    /* Para que el título abarque ambas columnas */
 }
 
 .data-label {
@@ -133,10 +110,8 @@
     margin-bottom: 2px;
 }
 
-/* Estilos para los bullets (datos) */
 .bullet-list {
     list-style-type: none;
-    /* Quita el bullet por defecto */
     padding: 0;
     margin-top: 0;
     margin-bottom: 15px;
@@ -150,21 +125,13 @@
 }
 
 .bullet-list li::before {
-    /* 🟢 CLAVE: Crea el punto de bullet personalizado */
     content: "•";
     color: #3b82f6;
     font-weight: bold;
     display: inline-block;
     width: 1em;
-    /* Espacio para el bullet */
     margin-left: -1em;
-    /* Mueve el bullet hacia la izquierda */
 }
-
-
-/* --- BOTÓN DE EDICIÓN --- */
-
-/* --- BOTÓN DE EDICIÓN --- */
 
 .btn-editar {
     background-color: #496F96;
@@ -176,24 +143,15 @@
     font-weight: 600;
     font-size: 15px;
     transition: background-color 0.2s;
-
-    /* 🟢 CLAVE: Uso de Flexbox para alinear verticalmente el texto y el icono */
     display: flex;
     align-items: center;
-    /* Centra verticalmente los elementos internos */
     justify-content: center;
-    /* Centra horizontalmente el contenido (opcional, si no está 'display: block') */
-
-    /* 🟢 CLAVE: Posicionamiento en la esquina inferior derecha del div.socio-economico-der */
     margin-top: 20px;
     margin-left: auto;
-    /* Empuja el botón a la derecha */
 }
 
-/* 🆕 NUEVO: Estilo para el icono para darle un poco de espacio a la izquierda */
 .btn-editar .arrow {
     margin-left: 8px;
-    /* Espacio entre el texto y el icono */
 }
 
 .btn-editar:hover {

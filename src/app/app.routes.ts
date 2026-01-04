@@ -27,9 +27,8 @@ export const routes: Routes = [
         ]
     },
 
-    // 3. RUTA DE INICIO (HOME) - Debe ser de primer nivel y usar el MainLayout
     {
-        path: 'home', // 🟢 AHORA SÍ existe la ruta /home
+        path: 'home',
         component: MainLayoutComponent,
         children: [
             { path: '', component: InicioComponent }
@@ -48,9 +47,6 @@ export const routes: Routes = [
             { path: 'info', component: EditarInformacionPacienteComponent },
             { path: 'mi-cuenta', component: MiCuentaComponent }
             //{ path: 'home', component: InicioComponent }
-
-            // Otras rutas
-            // { path: 'reportes', component: ReporteComponent },
         ]
     },
 

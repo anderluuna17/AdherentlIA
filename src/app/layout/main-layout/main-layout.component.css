@@ -25,57 +25,35 @@
     color: #4b7ebd;
 }
 
-/* ... Tus estilos anteriores ... */
+
 
 .user-details {
     margin-left: 10px;
-
-    /* 🟢 Mantener la apariencia de NO-BOTÓN */
     background: none;
     border: none;
     padding: 0;
     text-align: left;
-
-    /* ⚠️ Cambio Clave 1: Quitar el cursor:pointer del botón general */
-    /* Lo añadiremos solo al texto de "My Account" */
     cursor: default;
-
     color: inherit;
     font-family: inherit;
-    /* Necesitas forzar esto para que el contenido no se ponga en negrita o cambie de color inesperadamente */
     font-weight: normal;
 }
 
-/* ⚠️ Cambio Clave 2: Eliminar el efecto de hover del botón general */
 .user-details:hover {
     text-decoration: none;
-    /* Asegura que no se subraye el botón completo */
     color: inherit;
-    /* Asegura que no cambie el color del texto completo */
 }
 
-
-/* 🆕 NUEVA REGLA: Estilo para el enlace real (<small>) */
 .user-details small {
-    /* El texto del enlace debe ser visiblemente distinto */
     color: #4b7ebd;
-    /* Un color que denote interactividad */
     font-weight: 500;
-    /* Hace que el texto del enlace resalte un poco */
-
-    /* 🟢 CLAVE: El cursor de enlace se aplica solo aquí */
     cursor: pointer;
-
-    /* 🟢 Opcional: Para asegurar que el texto se vea como un enlace */
     text-decoration: none;
 }
 
-/* 🆕 NUEVA REGLA: Estilo hover aplicado SOLO al texto de "My Account" */
 .user-details small:hover {
     text-decoration: underline;
-    /* Solo el texto del enlace se subraya */
     color: #3b5f85;
-    /* Opcional: Un ligero cambio de color al hacer hover */
 }
 
 .menu a {
@@ -101,7 +79,6 @@
     background-color: #f4f7fc;
 }
 
-/* 📌 SUBMENÚ PACIENTES */
 .menu-group {
     display: flex;
     flex-direction: column;
@@ -125,7 +102,6 @@
     display: flex;
 }
 
-/* Flecha animada */
 .arrow {
     transition: transform 0.25s;
 }

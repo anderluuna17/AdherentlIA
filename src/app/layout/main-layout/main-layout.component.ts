@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router'; // ✅ Importa esto
-import { CommonModule } from '@angular/common'; // ✅ Recomendado
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
     selector: 'app-main-layout',
-    standalone: true, // ✅ importante
-    imports: [RouterModule, CommonModule], // ✅ agrega ambos
+    standalone: true,
+    imports: [RouterModule, CommonModule],
     templateUrl: './main-layout.component.html',
     styleUrls: ['./main-layout.component.css']
 })

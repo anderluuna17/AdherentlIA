@@ -1,6 +1,3 @@
-/* --- BASE GENERAL --- */
-
-/* CONTENEDOR PRINCIPAL */
 .registrar-paciente {
     background: #ffffff;
     padding: 70px;
@@ -11,7 +8,6 @@
     transition: opacity 0.3s ease-in-out;
 }
 
-/* TÍTULO Y BARRA SUPERIOR */
 .barra-superior {
     display: flex;
     align-items: center;
@@ -25,10 +21,8 @@
     font-size: 22px;
     color: #1e293b;
     margin: 0;
-    /* Aseguramos la alineación con el logo */
 }
 
-/* PROGRESO */
 .progress-bar {
     display: flex;
     justify-content: center;
@@ -51,19 +45,13 @@
     transform: scale(1.15);
 }
 
-/* ... estilos para .info-group h3, label, input, select, textarea (están correctos) ... */
-
-/* SECCIÓN DEL FORMULARIO */
-
 .form-section {
-    /* Define la apariencia de tarjeta (fondo, bordes, sombra) */
     background: #ffffff;
     padding: 25px;
     border-radius: 10px;
     border: 1px solid #e1e4eb;
     box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
     box-sizing: border-box;
-    /* CLAVE: Ancho base para las tarjetas internas de los pasos */
     max-width: 900px;
     margin: auto;
 }
@@ -74,7 +62,6 @@
     color: #334155;
 }
 
-/* CAMPOS */
 label {
     display: block;
     font-weight: 600;
@@ -106,8 +93,6 @@ textarea {
     height: 80px;
 }
 
-
-/* --- STEP 1 ESPECÍFICO --- */
 .step1-container {
     width: 100%;
     display: flex;
@@ -116,24 +101,17 @@ textarea {
 }
 
 .step1-container form {
-    /* ... (Estilos de centrado y max-width: 600px; están correctos) ... */
     max-width: 600px;
     margin: auto;
     text-align: left !important;
 }
 
-/* ... estilos .search-container, .paciente-info, etc. (están correctos) ... */
-/* El botón .btn-siguiente en el step 1 usa los estilos base (#3b82f6) */
 .step1-container form h3,
 .step1-container form .descripcion {
-    /* Centra el texto mismo */
     text-align: center;
-
-    /* Asegura que el título y descripción no se vean empujados por el form */
     margin-bottom: 10px;
 }
 
-/* Contenedor de la información del paciente */
 .paciente-info {
     background: #EBF5FB;
     padding: 18px 22px;
@@ -141,7 +119,6 @@ textarea {
     border: 1px solid #EBF5FB;
     width: 100%;
     max-width: 600px;
-    /* Para que no se vea gigante */
     text-align: left;
     display: flex;
     flex-direction: column;
@@ -157,11 +134,7 @@ textarea {
     border: 1px solid #EBF5FB;
     border-radius: 8px;
     padding: 8px 10px;
-
-    /* CAMBIO CLAVE: Añadir margen inferior */
     margin-bottom: 30px;
-    /* Puedes ajustar este valor (ej: 15px, 25px) */
-
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
@@ -182,9 +155,7 @@ textarea {
 .btn-sig {
     display: block;
     margin: 50px auto 0 auto;
-    /* Siempre al centro */
 }
-
 
 .btn-sig {
     border: none;
@@ -194,15 +165,11 @@ textarea {
     font-size: 20px;
     transition: 0.25s, transform 0.2s;
     font-weight: 600;
-
     line-height: 1;
-
 }
 
-/* Colores por defecto (usados principalmente en STEP 1 si no se anulan) */
 .btn-sig {
     background-color: #154369;
-    /* Azul claro original */
     color: white;
 }
 
@@ -211,45 +178,28 @@ textarea {
     opacity: 0.9;
 }
 
-/* --- STEP 2 Y STEP 3: CAMBIO DE COLOR DE BOTÓN --- */
-
-/* Contenedor de botones para Steps 2 y 3 (ambos usan la clase .botones) */
 .botones {
-    /* 🟢 Mantener Flexbox para la separación interna */
     display: flex;
-    justify-content: space-between;
     justify-content: space-around;
     gap: 5px;
     margin-top: 60px;
-
-    /* 🟢 CLAVE 1: Aplicar el mismo ancho de la grid */
-    /* La suma del ancho de tus columnas más el gap: 320px + 320px + 110px = 750px */
     width: 850px;
-
-    /* 🟢 CLAVE 2: Centrar el bloque de botones (igual que la grid) */
     margin-left: auto;
     margin-right: auto;
-
     align-items: center;
 }
 
-
-/* 🟢 Paso 2 y 3: Nuevo color para el botón 'Siguiente' */
 .step2-form .btn-siguiente,
 .step3-container .btn-siguiente {
     background-color: #496F96;
-    /* Azul oscuro para botones de acción final */
 }
 
-/* 🟢 Paso 2 y 3: Nuevo color para el botón 'Anterior' (Regresar) */
 .step2-form .btn-anterior,
 .step3-container .btn-anterior {
     background-color: #CAD5E1;
-    /* Gris claro azulado para botones secundarios */
     color: #475569;
 }
 
-/* Estilos de hover para los nuevos colores */
 .step2-form .btn-siguiente:hover,
 .step3-container .btn-siguiente:hover {
     background-color: #3f5d7d;
@@ -260,9 +210,7 @@ textarea {
     background-color: #b0bcc8;
 }
 
-/* --- STEP 2 ESPECÍFICO --- */
 .step2-form {
-    /* Ya hereda de .form-section para el fondo y sombra */
     max-width: 900px;
     margin: auto;
     display: flex;
@@ -275,7 +223,6 @@ textarea {
     color: #334155;
 }
 
-/* Radios alineados vertical */
 .radio-group {
     display: flex;
     flex-direction: column;
@@ -291,88 +238,56 @@ textarea {
 .form-grid {
     justify-content: center;
     grid-template-columns: 320px 320px;
-    /* Ancho consistente para cada columna */
     gap: 150px;
     display: grid;
 }
 
 .step2-form .btn-siguiente,
 .step2-form .btn-anterior {
-    /* 🟢 Ajuste el padding para un mejor aspecto: vertical vs horizontal */
     padding: 10px 35px;
-    /* Más ancho, menos alto, se ve más formal */
     padding-left: 55px;
     padding-right: 55px;
 }
 
-/* --- STEP 3 ESPECÍFICO (Predicción) --- */
-
 .step3-container {
-    /* Mantenemos el centrado del bloque y el text-align: center */
     text-align: center;
     max-width: 1000px;
     margin: 40px center;
     padding: 50px;
-
-    /* 💥 CAMBIO CLAVE: ANULAR EL GRID */
     display: block;
-    /* Si tienes más reglas de grid en la clase .form-section que se hereden */
     grid-template-columns: none;
     gap: 0;
 }
 
 .step3-container .btn-siguiente,
 .step3-container .btn-anterior {
-    /* 🟢 Ajuste el padding para un mejor aspecto: vertical vs horizontal */
     padding: 10px 35px;
-    /* Más ancho, menos alto, se ve más formal */
     padding-left: 55px;
     padding-right: 55px;
 }
 
-/* 🟢 Además, asegura que los contenedores hijos sean bloques de ancho completo */
 .header-text,
 .prediction-result {
     display: block;
-    /* Asegura que se apilen verticalmente */
     width: 100%;
 }
 
-/* 🟢 Limpiar el texto dentro de la descripción */
 .descripcion {
     text-align: center;
-    /* Reducir espacio con el porcentaje */
     margin-bottom: 10px;
 }
 
-/* 🟢 Porcentaje */
 .prediction-result {
-    /* Centrado garantizado por el padre */
     margin-bottom: 150px;
-    /* Espacio para separar de los botones */
 }
 
 .prediction-result .percentage {
-    /* 1. Tamaño: Hace que el número sea grande y dominante */
     font-size: 85px;
-
-    /* 2. Peso: Lo hace muy grueso para que resalte */
     font-weight: 1000;
-
-    /* 3. Color: Usa el naranja/ámbar de tu mockup */
     color: #F89B2B;
-
-    /* 4. Display: Asegura que se centre bien como un bloque */
     display: inline-block;
-
-    /* 5. Margen: Le da un poco de espacio si lo necesitas, aunque el padre debe manejar el centrado */
     margin-top: 30px;
 }
-
-
-
-
-/* --- 3. ESTILOS DE BOTONES BASE Y HOVER --- */
 
 .btn-siguiente,
 .btn-anterior {
@@ -380,16 +295,12 @@ textarea {
     border-radius: 8px;
     cursor: pointer;
     font-size: 20px;
-    /* Tamaño grande para texto de botón */
     transition: background 0.25s, transform 0.2s;
     font-weight: 600;
     line-height: 1;
-    /* CLAVE: Ayuda a igualar la altura de los botones */
     margin: 0;
-    /* Aseguramos que los márgenes los maneje el contenedor .botones */
 }
 
-/* Colores por defecto (STEP 1) */
 .btn-siguiente {
     background-color: #154369;
     color: white;
